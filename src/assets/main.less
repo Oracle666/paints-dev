@@ -1,0 +1,51 @@
+@import "./fonts.less";
+@import "./vars.less";
+@import "./reset.less";
+@import "@splidejs/vue-splide/css";
+
+html,
+body {
+    font-family: @baseFont !important;
+    font-size: @baseFontSize !important;
+    color: @gray001;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: @gray001;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: @siteWidth;
+    padding-left: @containerPadding;
+    padding-right: @containerPadding;
+    flex-grow: 1;
+    max-width: 100%;
+    &-ignore {
+        margin-left: -@containerPadding;
+        margin-right: -@containerPadding;
+        @media @sm {
+            margin-left: -@containerPaddingSm;
+            margin-right: -@containerPaddingSm;
+        }
+    }
+    @media @sm {
+        padding-left: @containerPaddingSm;
+        padding-right: @containerPaddingSm;
+    }
+}
+.site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__content {
+        flex-grow: 1;
+    }
+}
